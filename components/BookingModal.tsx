@@ -558,20 +558,26 @@ function BookingModalContent({
   const handlePaymentSuccess = useCallback(async (transactionId: string) => {
     setIsSubmitting(true);
     const bookingData = {
+      // Legacy fields for compatibility
       itemId: item.id,
       itemName: item.name,
+      // API expected fields
+      roomId: item.id,
+      room: item.name,
+      property: config.propertyName || "Riad di Siena",
       checkIn,
       checkOut: selectCheckout ? checkOut : "",
       nights: calculatedNights,
       guests,
       units,
-      totalEUR: total.toFixed(2),
+      total: total,
       firstName,
       lastName,
       email,
       phone,
       message,
-      paypalTransactionId: transactionId,
+      paypalOrderId: transactionId,
+      paypalStatus: "COMPLETED",
     };
 
     try {
@@ -591,7 +597,7 @@ function BookingModalContent({
     } finally {
       setIsSubmitting(false);
     }
-  }, [item, checkIn, checkOut, selectCheckout, calculatedNights, guests, units, total, firstName, lastName, email, phone, message, onBookingComplete]);
+  }, [item, config, checkIn, checkOut, selectCheckout, calculatedNights, guests, units, total, firstName, lastName, email, phone, message, onBookingComplete]);
 
   const handlePaymentError = useCallback((err: any) => {
     console.error("PayPal error:", err);
