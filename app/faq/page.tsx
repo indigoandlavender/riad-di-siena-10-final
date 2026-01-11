@@ -114,12 +114,27 @@ export default function FAQPage() {
             <p className="text-[#2a2520]/40 text-sm mb-4">
               Still have questions?
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-block border border-[#2a2520]/20 px-10 py-4 text-xs tracking-[0.2em] uppercase hover:bg-[#2a2520] hover:text-[#f5f0e8] transition-colors"
             >
               Get in Touch
             </a>
+          </div>
+
+          {/* Derb Link */}
+          <div className="mt-8 text-center">
+            <p className="text-[#2a2520]/40 text-sm">
+              For more questions about Marrakech →{" "}
+              <a
+                href="https://www.derb.so"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2a2520]/60 hover:text-[#2a2520] underline underline-offset-2 transition-colors"
+              >
+                Derb
+              </a>
+            </p>
           </div>
         </div>
       </section>

@@ -128,6 +128,16 @@ export default function Footer() {
                 <li><Link href="/amenities" className="text-sand/70 text-sm hover:text-sand transition-colors">Amenities</Link></li>
                 <li><Link href="/philosophy" className="text-sand/70 text-sm hover:text-sand transition-colors">Philosophy</Link></li>
                 <li><Link href="/faq" className="text-sand/70 text-sm hover:text-sand transition-colors">FAQ</Link></li>
+                <li>
+                  <a
+                    href="https://www.derb.so"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sand/70 text-sm hover:text-sand transition-colors"
+                  >
+                    Derb
+                  </a>
+                </li>
                 <li><Link href="/contact" className="text-sand/70 text-sm hover:text-sand transition-colors">Contact Us</Link></li>
               </ul>
             </div>
