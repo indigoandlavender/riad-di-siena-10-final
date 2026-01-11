@@ -109,21 +109,8 @@ export default function FAQPage() {
             </div>
           ))}
 
-          {/* CTA */}
-          <div className="mt-16 text-center py-12 border border-[#2a2520]/10">
-            <p className="text-[#2a2520]/40 text-sm mb-4">
-              Still have questions?
-            </p>
-            <a
-              href="/contact"
-              className="inline-block border border-[#2a2520]/20 px-10 py-4 text-xs tracking-[0.2em] uppercase hover:bg-[#2a2520] hover:text-[#f5f0e8] transition-colors"
-            >
-              Get in Touch
-            </a>
-          </div>
-
           {/* Derb Link */}
-          <div className="mt-8 text-center">
+          <div className="mt-16 text-center">
             <p className="text-[#2a2520]/40 text-sm">
               For more questions about Marrakech →{" "}
               <a
