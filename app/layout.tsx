@@ -97,9 +97,53 @@ const structuredData = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "127",
+    "ratingValue": "5",
+    "reviewCount": "6",
     "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "author": { "@type": "Person", "name": "Ryan" },
+      "reviewBody": "My 6 nights stay here left me wanting to move in."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "author": { "@type": "Person", "name": "Céline" },
+      "reviewBody": "A real haven of peace close to the main square."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "author": { "@type": "Person", "name": "Giovanni" },
+      "reviewBody": "We felt at home. I recommend to all those who appreciate Moroccan hospitality."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "author": { "@type": "Person", "name": "Chloé" },
+      "reviewBody": "A real little haven of peace. The hosting was exceptional."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "author": { "@type": "Person", "name": "Juan Andrés" },
+      "reviewBody": "Best breakfast I had in a riad in Marrakesh."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "author": { "@type": "Person", "name": "Eduardo" },
+      "reviewBody": "This place was magical. I couldn't have asked for a better experience."
+    }
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Slow Morocco",
+    "url": "https://slowmorocco.com",
+    "@id": "https://slowmorocco.com/#organization"
   },
   "amenityFeature": [
     { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },

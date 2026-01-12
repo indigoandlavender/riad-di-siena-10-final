@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import TestimonialCarousel from "@/components/TestimonialCarousel";
+import StaticTestimonials from "@/components/StaticTestimonials";
 import SlowWaySouth from "@/components/SlowWaySouth";
+import SlowMoroccoBridge from "@/components/SlowMoroccoBridge";
 import BeyondTheWallsCarousel from "@/components/BeyondTheWallsCarousel";
 
 interface HomeSection {
@@ -15,15 +16,6 @@ interface HomeSection {
   Image_URL: string;
   Button_Text: string;
   Button_Link: string;
-}
-
-interface Testimonial {
-  Testimonial_ID: string;
-  Guest_Name: string;
-  Quote: string;
-  Source: string;
-  Date: string;
-  Published?: string;
 }
 
 interface Property {
@@ -38,7 +30,6 @@ interface Property {
 
 export default function Home() {
   const [sections, setSections] = useState<Record<string, HomeSection>>({});
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [beyondTheWalls, setBeyondTheWalls] = useState<Property[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -47,11 +38,6 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setSections(data || {}))
       .catch((err) => console.error("Home API error:", err));
-
-    fetch("/api/testimonials")
-      .then((res) => res.json())
-      .then((data) => setTestimonials(data || []))
-      .catch((err) => console.error("Testimonials API error:", err));
 
     fetch("/api/beyond-the-walls")
       .then((res) => res.json())
@@ -140,17 +126,11 @@ export default function Home() {
         </section>
       )}
 
-      {/* Testimonials */}
-      {testimonials.length > 0 && (
-        <section className="py-20 md:py-32 px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl text-center mb-16">
-              What Guests Say
-            </h2>
-            <TestimonialCarousel testimonials={testimonials} />
-          </div>
-        </section>
-      )}
+      {/* Testimonials - Static HTML for crawlers */}
+      <StaticTestimonials />
+
+      {/* Bridge to Slow Morocco */}
+      <SlowMoroccoBridge />
 
       {/* The Slow Way South - Syndicated Journey */}
       <SlowWaySouth />
