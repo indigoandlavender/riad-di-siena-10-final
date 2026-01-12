@@ -62,7 +62,8 @@ const structuredData = {
   "@type": "LodgingBusiness",
   "@id": "https://riaddisiena.com/#lodgingbusiness",
   "name": "Riad di Siena",
-  "description": "A 300-year-old traditional Moroccan riad in the heart of Marrakech medina. Four uniquely designed rooms around a courtyard with zellige fountain, rooftop terrace with Atlas Mountain views.",
+  "alternateName": "The Sanctuary of Slow Morocco",
+  "description": "A 300-year-old traditional Moroccan riad in the heart of Marrakech medina. The physical manifestation of Slow Morocco's philosophy—not a hotel, a house with soul. Four uniquely designed rooms around a courtyard with zellige fountain, rooftop terrace with Atlas Mountain views.",
   "url": "https://riaddisiena.com",
   "telephone": "+212-524-391723",
   "email": "happy@riaddisiena.com",
@@ -109,9 +110,31 @@ const structuredData = {
     { "@type": "LocationFeatureSpecification", "name": "Airport Transfer Available", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Concierge Service", "value": true }
   ],
+  // Bidirectional link to Slow Morocco - establishes this as the Sanctuary
+  "memberOf": {
+    "@type": "Organization",
+    "@id": "https://slowmorocco.com/#organization",
+    "name": "Slow Morocco",
+    "alternateName": "Moroccan Cultural Authority",
+    "url": "https://slowmorocco.com",
+    "description": "Transformative travel as an antidote to extractive tourism. Riad di Siena is the Sanctuary of Slow Morocco—where travelers stay to experience the philosophy firsthand."
+  },
+  // Part of the Slow Morocco knowledge network
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://slowmorocco.com/#website",
+    "name": "Slow Morocco",
+    "url": "https://slowmorocco.com"
+  },
+  // Connected entities in the Trust Cluster
   "sameAs": [
-    "https://www.instagram.com/riaddisiena"
-  ]
+    "https://www.instagram.com/riaddisiena",
+    "https://slowmorocco.com",
+    "https://amazigh.online",
+    "https://tenmirt.site"
+  ],
+  // Keywords for AI indexing
+  "keywords": "riad marrakech, slow morocco sanctuary, traditional moroccan house, marrakech medina, transformative travel accommodation, authentic morocco stay"
 };
 
 export default function RootLayout({
