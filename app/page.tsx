@@ -58,7 +58,7 @@ export default function Home() {
         {hero?.Image_URL ? (
           <Image
             src={hero.Image_URL}
-            alt={hero?.Title || "Riad di Siena"}
+            alt="Courtyard with zellige fountain at Riad di Siena, Marrakech medina"
             fill
             className="object-cover"
             priority

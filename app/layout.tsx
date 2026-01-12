@@ -73,10 +73,10 @@ const structuredData = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "37 Derb Fhal Zfriti, Kennaria",
-    "addressLocality": "Marrakech",
+    "addressLocality": "Marrakech Medina",
     "addressRegion": "Marrakech-Safi",
     "postalCode": "40000",
-    "addressCountry": "MA"
+    "addressCountry": "Morocco"
   },
   "geo": {
     "@type": "GeoCoordinates",

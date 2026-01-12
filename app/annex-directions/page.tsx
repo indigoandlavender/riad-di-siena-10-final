@@ -244,7 +244,7 @@ export default function AnnexDirectionsPage() {
                   <div className="aspect-video bg-foreground/5 overflow-hidden rounded">
                     <img 
                       src={step.Image_URL} 
-                      alt={`Step ${step.Step_Number}`}
+                      alt={`Walking directions step ${step.Step_Number}: ${step.Caption?.slice(0, 50) || 'Navigate through Marrakech medina'}`}
                       className="w-full h-full object-cover"
                     />
                   </div>

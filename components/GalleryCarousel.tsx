@@ -77,7 +77,7 @@ export default function GalleryCarousel({ images, title, subtitle }: GalleryCaro
                   {image.Image_URL && (
                     <img
                       src={image.Image_URL}
-                      alt={image.Caption || "Gallery image"}
+                      alt={image.Caption || "Interior view of traditional Moroccan riad"}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   )}
